@@ -349,18 +349,18 @@ function LinkedinIcon({ className = "w-5 h-5 text-cyan-400" }) {
 
 function LanguageToggle({ lang, onToggle, label, switchTo }) {
   return (
-    <div className="sticky top-4 z-30 mb-6 flex justify-end">
+    <div className="sticky top-4 z-30 mb-4 sm:mb-6 flex justify-end">
       <button
         type="button"
         onClick={onToggle}
         aria-label={`${label}: ${switchTo}`}
-        className="flex items-center gap-3 rounded-full border border-pink-500/60 bg-black/80 px-4 py-2 text-sm font-semibold text-cyan-300 shadow-lg shadow-pink-500/20 backdrop-blur-sm transition hover:border-cyan-400 hover:text-pink-300"
+        className="flex items-center gap-2 sm:gap-3 rounded-full border border-pink-500/60 bg-black/80 px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-semibold text-cyan-300 shadow-lg shadow-pink-500/20 backdrop-blur-sm transition hover:border-cyan-400 hover:text-pink-300"
       >
-        <span className="text-pink-400">{label}</span>
-        <span className="rounded-full border border-cyan-500/40 px-3 py-1 text-xs uppercase tracking-[0.25em]">
+        <span className="text-pink-400 hidden sm:inline">{label}</span>
+        <span className="rounded-full border border-cyan-500/40 px-2 sm:px-3 py-1 text-[10px] sm:text-xs uppercase tracking-[0.25em]">
           {lang.toUpperCase()}
         </span>
-        <span className="text-xs uppercase tracking-[0.25em] text-gray-300">
+        <span className="text-[10px] sm:text-xs uppercase tracking-[0.25em] text-gray-300">
           {switchTo}
         </span>
       </button>
@@ -403,9 +403,9 @@ function TechItem({ name, description, detailsLabel }) {
       {open && (
         <div
           ref={poperRef}
-          className={`absolute left-0 ${position} z-20 mt-3 w-72 rounded-2xl border border-pink-500/60 bg-black/95 p-4 text-sm text-gray-300 shadow-2xl shadow-pink-500/20 backdrop-blur-sm`}
+          className={`absolute left-0 ${position} z-20 mt-3 w-64 sm:w-72 max-w-[calc(100vw-2rem)] rounded-2xl border border-pink-500/60 bg-black/95 p-3 sm:p-4 text-xs sm:text-sm text-gray-300 shadow-2xl shadow-pink-500/20 backdrop-blur-sm`}
         >
-          <div className="mb-2 text-xs uppercase tracking-[0.25em] text-pink-400">
+          <div className="mb-2 text-[10px] sm:text-xs uppercase tracking-[0.25em] text-pink-400">
             {detailsLabel}
           </div>
           <p className="leading-relaxed">{description}</p>
@@ -450,8 +450,8 @@ function TimelineEduItem({
       </div>
 
       {open && (
-        <div className="absolute left-8 top-full z-20 mt-3 w-72 rounded-2xl border border-pink-500/60 bg-black/95 p-4 text-sm text-gray-300 shadow-2xl shadow-pink-500/20 backdrop-blur-sm">
-          <div className="mb-2 text-xs uppercase tracking-[0.25em] text-pink-400">
+        <div className="absolute left-4 sm:left-8 top-full z-20 mt-3 w-64 sm:w-72 max-w-[calc(100vw-2rem)] rounded-2xl border border-pink-500/60 bg-black/95 p-3 sm:p-4 text-xs sm:text-sm text-gray-300 shadow-2xl shadow-pink-500/20 backdrop-blur-sm">
+          <div className="mb-2 text-[10px] sm:text-xs uppercase tracking-[0.25em] text-pink-400">
             {detailsLabel}
           </div>
           <p className="leading-relaxed">{details}</p>
@@ -560,9 +560,9 @@ export default function CyberpunkCV() {
         }
       `}</style>
 
-      <div className="min-h-screen bg-black p-6 font-mono text-cyan-300">
+      <div className="min-h-screen bg-black p-3 sm:p-6 font-mono text-cyan-300">
         <div className="cv-shell mx-auto max-w-6xl p-px shadow-2xl shadow-cyan-500/20">
-          <div className="cv-content rounded-2xl border border-cyan-500/40 p-8">
+          <div className="cv-content rounded-2xl border border-cyan-500/40 p-4 sm:p-6 md:p-8">
             <LanguageToggle
               lang={lang}
               onToggle={() => setLang((current) => (current === "en" ? "pl" : "en"))}
@@ -570,18 +570,18 @@ export default function CyberpunkCV() {
               switchTo={t.switchTo}
             />
 
-            <div className="rounded-2xl border border-pink-500/60 bg-black/60 p-6 shadow-lg shadow-pink-500/20 backdrop-blur-sm">
-              <div className="grid items-center gap-6 md:grid-cols-3">
-                <div className="md:col-span-2">
-                  <h1 className="text-4xl font-bold tracking-widest text-cyan-400">
+            <div className="rounded-2xl border border-pink-500/60 bg-black/60 p-4 sm:p-6 shadow-lg shadow-pink-500/20 backdrop-blur-sm">
+              <div className="grid items-center gap-4 sm:gap-6 lg:grid-cols-3">
+                <div className="lg:col-span-2">
+                  <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-widest text-cyan-400 break-words">
                     {t.name}
                   </h1>
-                  <p className="mt-2 text-pink-400">{t.role}</p>
-                  <p className="mt-4 leading-relaxed text-gray-300">{t.about}</p>
+                  <p className="mt-2 text-sm sm:text-base text-pink-400">{t.role}</p>
+                  <p className="mt-4 text-sm sm:text-base leading-relaxed text-gray-300">{t.about}</p>
                 </div>
 
-                <div className="flex justify-center md:justify-end">
-                  <div className="h-40 w-40 overflow-hidden rounded-xl border border-cyan-500/60 bg-black/80 shadow-lg shadow-cyan-500/20">
+                <div className="flex justify-center lg:justify-end order-first lg:order-last">
+                  <div className="h-28 w-28 sm:h-32 sm:w-32 lg:h-40 lg:w-40 overflow-hidden rounded-xl border border-cyan-500/60 bg-black/80 shadow-lg shadow-cyan-500/20">
                     <img 
                       src={import.meta.env.BASE_URL + "/photo.jpg"} 
                       alt={t.name}
@@ -592,10 +592,10 @@ export default function CyberpunkCV() {
               </div>
             </div>
 
-            <div className="mt-8 grid gap-8 md:grid-cols-3">
-              <div className="space-y-8 md:col-span-2">
+            <div className="mt-6 sm:mt-8 grid gap-6 sm:gap-8 lg:grid-cols-3">
+              <div className="space-y-6 sm:space-y-8 lg:col-span-2">
                 <section>
-                  <h2 className="border-b border-cyan-500 pb-2 text-xl text-cyan-400">
+                  <h2 className="border-b border-cyan-500 pb-2 text-lg sm:text-xl text-cyan-400">
                     {t.sections.experience}
                   </h2>
                   <div className="mt-4 space-y-6">
@@ -613,7 +613,7 @@ export default function CyberpunkCV() {
                 </section>
 
                 <section>
-                  <h2 className="border-b border-cyan-500 pb-2 text-xl text-cyan-400">
+                  <h2 className="border-b border-cyan-500 pb-2 text-lg sm:text-xl text-cyan-400">
                     {t.sections.achievements}
                   </h2>
                   <ul className="mt-3 list-disc space-y-2 pl-5 text-gray-300">
@@ -624,7 +624,7 @@ export default function CyberpunkCV() {
                 </section>
 
                 <section>
-                  <h2 className="border-b border-cyan-500 pb-2 text-xl text-cyan-400">
+                  <h2 className="border-b border-cyan-500 pb-2 text-lg sm:text-xl text-cyan-400">
                     {t.sections.projects}
                   </h2>
                   <div className="mt-3 space-y-5">
@@ -642,10 +642,10 @@ export default function CyberpunkCV() {
                 </section>
 
                 <section>
-                  <h2 className="border-b border-cyan-500 pb-2 text-xl text-cyan-400">
+                  <h2 className="border-b border-cyan-500 pb-2 text-lg sm:text-xl text-cyan-400">
                     {t.sections.techStack}
                   </h2>
-                  <div className="mt-4 grid grid-cols-1 gap-3 md:grid-cols-2">
+                  <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {t.techStack.map((item) => (
                       <TechItem
                         key={item.name}
@@ -658,9 +658,9 @@ export default function CyberpunkCV() {
                 </section>
               </div>
 
-              <div className="space-y-8">
+              <div className="space-y-6 sm:space-y-8">
                 <section>
-                  <h2 className="border-b border-cyan-500 pb-2 text-xl text-cyan-400">
+                  <h2 className="border-b border-cyan-500 pb-2 text-lg sm:text-xl text-cyan-400">
                     {t.sections.links}
                   </h2>
                   <div className="mt-3 space-y-3">
@@ -680,7 +680,7 @@ export default function CyberpunkCV() {
                 </section>
 
                 <section>
-                  <h2 className="border-b border-cyan-500 pb-2 text-xl text-cyan-400">
+                  <h2 className="border-b border-cyan-500 pb-2 text-lg sm:text-xl text-cyan-400">
                     {t.sections.languages}
                   </h2>
                   <div className="mt-3 space-y-2 text-gray-300">
@@ -691,7 +691,7 @@ export default function CyberpunkCV() {
                 </section>
 
                 <section>
-                  <h2 className="border-b border-cyan-500 pb-2 text-xl text-cyan-400">
+                  <h2 className="border-b border-cyan-500 pb-2 text-lg sm:text-xl text-cyan-400">
                     {t.sections.learning}
                   </h2>
                   <ul className="mt-3 list-disc space-y-1 pl-5 text-gray-300">
@@ -702,7 +702,7 @@ export default function CyberpunkCV() {
                 </section>
 
                 <section>
-                  <h2 className="border-b border-cyan-500 pb-2 text-xl text-cyan-400">
+                  <h2 className="border-b border-cyan-500 pb-2 text-lg sm:text-xl text-cyan-400">
                     {t.sections.education}
                   </h2>
                   <div className="mt-4 space-y-6">
@@ -721,7 +721,7 @@ export default function CyberpunkCV() {
                 </section>
 
                 <section>
-                  <h2 className="border-b border-cyan-500 pb-2 text-xl text-cyan-400">
+                  <h2 className="border-b border-cyan-500 pb-2 text-lg sm:text-xl text-cyan-400">
                     {t.sections.interests}
                   </h2>
                   <div className="mt-3 flex flex-wrap gap-2 text-sm text-gray-300">
