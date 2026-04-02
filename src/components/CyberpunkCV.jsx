@@ -312,11 +312,27 @@ function LanguageToggle({ lang, onToggle, label, switchTo }) {
 
 function TechItem({ name, description, detailsLabel }) {
   const [open, setOpen] = useState(false);
+  const [position, setPosition] = useState("top-full");
+  const poperRef = React.useRef(null);
+
+  const handleMouseEnter = (e) => {
+    setOpen(true);
+
+    // Check available space for the poper
+    const rect = e.currentTarget.getBoundingClientRect();
+    const viewportHeight = window.innerHeight;
+
+    if (rect.bottom + 150 > viewportHeight) {
+      setPosition("bottom-full");
+    } else {
+      setPosition("top-full");
+    }
+  };
 
   return (
     <div
       className="relative"
-      onMouseEnter={() => setOpen(true)}
+      onMouseEnter={handleMouseEnter}
       onMouseLeave={() => setOpen(false)}
     >
       <button
@@ -327,7 +343,10 @@ function TechItem({ name, description, detailsLabel }) {
       </button>
 
       {open && (
-        <div className="absolute left-0 top-full z-20 mt-3 w-72 rounded-2xl border border-pink-500/60 bg-black/95 p-4 text-sm text-gray-300 shadow-2xl shadow-pink-500/20 backdrop-blur-sm">
+        <div
+          ref={poperRef}
+          className={`absolute left-0 ${position} z-20 mt-3 w-72 rounded-2xl border border-pink-500/60 bg-black/95 p-4 text-sm text-gray-300 shadow-2xl shadow-pink-500/20 backdrop-blur-sm`}
+        >
           <div className="mb-2 text-xs uppercase tracking-[0.25em] text-pink-400">
             {detailsLabel}
           </div>
@@ -355,7 +374,7 @@ function TimelineEduItem({
       onMouseLeave={() => setOpen(false)}
     >
       {!isLast && (
-        <div className="absolute left-2 top-5 bottom-[-24px] w-px bg-cyan-500/30"></div>
+        <div className="absolute left-2 top-5 -bottom-6 w-px bg-cyan-500/30"></div>
       )}
 
       <div className="absolute left-0 top-2 h-4 w-4 rounded-full bg-pink-500 shadow shadow-pink-500/50"></div>
@@ -388,7 +407,7 @@ function TimelineExperienceItem({ role, company, period, bullets, isLast = false
   return (
     <div className="relative pl-8">
       {!isLast && (
-        <div className="absolute left-2 top-5 bottom-[-24px] w-px bg-cyan-500/30"></div>
+        <div className="absolute left-2 top-5 -bottom-6 w-px bg-cyan-500/30"></div>
       )}
 
       <div className="absolute left-0 top-2 h-4 w-4 rounded-full bg-cyan-400 shadow shadow-cyan-400/50"></div>
@@ -484,7 +503,7 @@ export default function CyberpunkCV() {
       `}</style>
 
       <div className="min-h-screen bg-black p-6 font-mono text-cyan-300">
-        <div className="cv-shell mx-auto max-w-6xl p-[1px] shadow-2xl shadow-cyan-500/20">
+        <div className="cv-shell mx-auto max-w-6xl p-px shadow-2xl shadow-cyan-500/20">
           <div className="cv-content rounded-2xl border border-cyan-500/40 p-8">
             <LanguageToggle
               lang={lang}
