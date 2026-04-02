@@ -108,7 +108,7 @@ const translations = {
       github: "GitHub",
       linkedin: "LinkedIn",
     },
-    languages: ["Polish – Native", "English – Working proficiency"],
+    languages: ["Polish – Native", "English – Working proficiency - C1 AdvancedLevel"],
     learning: [
       "C# / .NET development",
       "Frontend (Astro, React, Tailwind)",
@@ -246,7 +246,7 @@ const translations = {
       github: "GitHub",
       linkedin: "LinkedIn",
     },
-    languages: ["Polski – Ojczysty", "Angielski – Komunikatywny zawodowo"],
+    languages: ["Polski – Ojczysty", "Angielski – C1 - Komunikatywny zawodowo"],
     learning: [
       "Rozwój w C# / .NET",
       "Frontend (Astro, React, Tailwind)",
