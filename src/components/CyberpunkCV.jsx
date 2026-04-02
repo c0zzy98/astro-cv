@@ -539,8 +539,12 @@ export default function CyberpunkCV() {
                 </div>
 
                 <div className="flex justify-center md:justify-end">
-                  <div className="flex h-40 w-40 items-center justify-center rounded-xl border border-cyan-500/60 bg-black/80 text-xs text-gray-500 shadow-lg shadow-cyan-500/20">
-                    {t.photo}
+                  <div className="h-40 w-40 overflow-hidden rounded-xl border border-cyan-500/60 bg-black/80 shadow-lg shadow-cyan-500/20">
+                    <img 
+                      src="/photo.jpg" 
+                      alt={t.name}
+                      className="h-full w-full object-cover"
+                    />
                   </div>
                 </div>
               </div>
@@ -625,9 +629,9 @@ export default function CyberpunkCV() {
                       icon={<GithubIcon />}
                     />
                     <LinkCard
-                      href="https://linkedin.com/in/yourprofile"
+                      href="https://www.linkedin.com/in/kacper-k-64bb91245"
                       label={t.links.linkedin}
-                      value="linkedin.com/in/yourprofile"
+                      value="www.linkedin.com/in/kacper-k-64bb91245"
                       icon={<LinkedinIcon />}
                     />
                   </div>
