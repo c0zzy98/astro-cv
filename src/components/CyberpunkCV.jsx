@@ -1,0 +1,612 @@
+import React, { useState } from "react";
+
+const translations = {
+  en: {
+    langLabel: "Language",
+    switchTo: "PL",
+    name: "KOZIOŁ",
+    role: "IT Support Engineer | ERP IFS Cloud",
+    about:
+      "IT Support Engineer focused on solving real business problems, integrations and system troubleshooting. Actively developing in C# / .NET and modern web technologies.",
+    photo: "PHOTO",
+    details: "Details",
+    sections: {
+      experience: "Experience",
+      achievements: "Achievements",
+      projects: "Projects",
+      techStack: "Tech Stack",
+      links: "Links",
+      languages: "Languages",
+      learning: "Learning",
+      education: "Education",
+      interests: "Interests",
+    },
+    experience: [
+      {
+        role: "IT Support Engineer",
+        company: "Citronex",
+        period: "2022-10-03 - Present",
+        bullets: [
+          "Supporting ERP IFS Cloud implementations",
+          "Debugging integrations (EDI, OCR, KSeF)",
+          "SQL analysis and reporting",
+        ],
+      },
+    ],
+    achievements: [
+      "Resolved recurring integration issues across EDI and OCR flows",
+      "Improved data validation using SQL-based analysis",
+      "Supported business-critical ERP processes",
+    ],
+    project: {
+      title: "Formify (Blazor + PostgreSQL)",
+      bullets: [
+        "Authentication & session handling",
+        "Meal tracking system",
+        "Dashboard with macro calculations",
+      ],
+    },
+    techStack: [
+      {
+        name: "Windows / Linux",
+        description: "System troubleshooting and daily support.",
+      },
+      {
+        name: "SQL / Oracle",
+        description: "Data analysis and debugging ERP issues.",
+      },
+      {
+        name: "IFS Cloud",
+        description: "ERP support and business process validation.",
+      },
+      {
+        name: "C# / .NET",
+        description: "Learning fullstack development.",
+      },
+      {
+        name: "Networking",
+        description: "Basic infrastructure troubleshooting.",
+      },
+      {
+        name: "Git / GitHub",
+        description: "Version control and portfolio projects.",
+      },
+    ],
+    links: {
+      github: "GitHub",
+      linkedin: "LinkedIn",
+    },
+    languages: ["Polish – Native", "English – Working proficiency"],
+    learning: [
+      "C# / .NET development",
+      "Frontend (Astro, React, Tailwind)",
+      "System integrations",
+    ],
+    education: [
+      {
+        title: "Master’s Degree",
+        subtitle: "University name / field",
+        period: "201X–201X",
+        details:
+          "Advanced studies focused on analytical thinking, problem solving and system-level understanding.",
+      },
+      {
+        title: "Engineer’s Degree",
+        subtitle: "University name / field",
+        period: "201X–201X",
+        details:
+          "Technical foundation in IT, including programming basics and systems.",
+      },
+      {
+        title: "Technical School (IT)",
+        subtitle: "IT qualifications",
+        period: "201X–201X",
+        details:
+          "Professional IT qualifications with hands-on work in networking, systems and real-world technical tasks.",
+      },
+    ],
+    interests: ["Fitness", "Combat sports", "Programming"],
+  },
+  pl: {
+    langLabel: "Język",
+    switchTo: "EN",
+    name: "KOZIOŁ",
+    role: "IT Support Engineer | ERP IFS Cloud",
+    about:
+      "IT Support Engineer skupiony na rozwiązywaniu realnych problemów biznesowych, integracjach i troubleshootingu systemów. Aktywnie rozwijam się w C# / .NET oraz nowoczesnych technologiach webowych.",
+    photo: "ZDJĘCIE",
+    details: "Szczegóły",
+    sections: {
+      experience: "Doświadczenie",
+      achievements: "Osiągnięcia",
+      projects: "Projekty",
+      techStack: "Tech Stack",
+      links: "Linki",
+      languages: "Języki",
+      learning: "Rozwój",
+      education: "Edukacja",
+      interests: "Zainteresowania",
+    },
+    experience: [
+      {
+        role: "IT Support Engineer",
+        company: "Citronex",
+        period: "Obecnie",
+        bullets: [
+          "Wsparcie wdrożeń ERP IFS Cloud",
+          "Debugowanie integracji (EDI, OCR, KSeF)",
+          "Analiza SQL i raportowanie",
+        ],
+      },
+    ],
+    achievements: [
+      "Rozwiązywanie powracających problemów integracyjnych w obszarze EDI i OCR",
+      "Usprawnienie walidacji danych dzięki analizie opartej o SQL",
+      "Wsparcie krytycznych procesów biznesowych w ERP",
+    ],
+    project: {
+      title: "Formify (Blazor + PostgreSQL)",
+      bullets: [
+        "Uwierzytelnianie i obsługa sesji",
+        "System śledzenia posiłków",
+        "Dashboard z kalkulacją makro",
+      ],
+    },
+    techStack: [
+      {
+        name: "Windows / Linux",
+        description: "Troubleshooting systemów i codzienne wsparcie użytkowników.",
+      },
+      {
+        name: "SQL / Oracle",
+        description: "Analiza danych i debugowanie problemów ERP.",
+      },
+      {
+        name: "IFS Cloud",
+        description: "Wsparcie ERP i walidacja procesów biznesowych.",
+      },
+      {
+        name: "C# / .NET",
+        description: "Nauka developmentu fullstackowego.",
+      },
+      {
+        name: "Sieci",
+        description: "Podstawowy troubleshooting infrastruktury.",
+      },
+      {
+        name: "Git / GitHub",
+        description: "Kontrola wersji i projekty do portfolio.",
+      },
+    ],
+    links: {
+      github: "GitHub",
+      linkedin: "LinkedIn",
+    },
+    languages: ["Polski – Ojczysty", "Angielski – Komunikatywny zawodowo"],
+    learning: [
+      "Rozwój w C# / .NET",
+      "Frontend (Astro, React, Tailwind)",
+      "Integracje systemowe",
+    ],
+    education: [
+      {
+        title: "Studia magisterskie",
+        subtitle: "Nazwa uczelni / kierunek",
+        period: "201X–201X",
+        details:
+          "Zaawansowane studia rozwijające myślenie analityczne, rozwiązywanie problemów i rozumienie złożonych systemów.",
+      },
+      {
+        title: "Studia inżynierskie",
+        subtitle: "Nazwa uczelni / kierunek",
+        period: "201X–201X",
+        details:
+          "Techniczne fundamenty IT, w tym podstawy programowania i systemów.",
+      },
+      {
+        title: "Technikum informatyczne",
+        subtitle: "Kwalifikacje zawodowe IT",
+        period: "201X–201X",
+        details:
+          "Kwalifikacje zawodowe IT oraz praktyczna praca z sieciami, systemami i zadaniami technicznymi.",
+      },
+    ],
+    interests: ["Siłownia", "Sporty walki", "Programowanie"],
+  },
+};
+
+function GithubIcon({ className = "w-5 h-5 text-cyan-400" }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+      className={className}
+    >
+      <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.426 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.866-.013-1.699-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.004.071 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.027A9.564 9.564 0 0 1 12 6.844a9.56 9.56 0 0 1 2.504.337c1.909-1.297 2.748-1.027 2.748-1.027.546 1.378.203 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.481A10.019 10.019 0 0 0 22 12.017C22 6.484 17.523 2 12 2Z" />
+    </svg>
+  );
+}
+
+function LinkedinIcon({ className = "w-5 h-5 text-cyan-400" }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+      className={className}
+    >
+      <path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19ZM8.339 10.338H5.667V18.333H8.339V10.338ZM7.003 5.667A1.56 1.56 0 0 0 5.444 7.226c0 .861.698 1.559 1.559 1.559a1.56 1.56 0 0 0 1.559-1.559 1.56 1.56 0 0 0-1.559-1.559ZM18.333 13.471c0-2.403-1.531-3.356-3.135-3.356-1.295 0-1.872.713-2.196 1.214v-0.991H10.33c.035.657 0 7.995 0 7.995h2.672v-4.466c0-.239.017-.478.088-.649.194-.477.637-.971 1.38-.971.973 0 1.362.733 1.362 1.809v4.277h2.672v-4.862Z" />
+    </svg>
+  );
+}
+
+function LanguageToggle({ lang, onToggle, label, switchTo }) {
+  return (
+    <div className="sticky top-4 z-30 mb-6 flex justify-end">
+      <button
+        type="button"
+        onClick={onToggle}
+        aria-label={`${label}: ${switchTo}`}
+        className="flex items-center gap-3 rounded-full border border-pink-500/60 bg-black/80 px-4 py-2 text-sm font-semibold text-cyan-300 shadow-lg shadow-pink-500/20 backdrop-blur-sm transition hover:border-cyan-400 hover:text-pink-300"
+      >
+        <span className="text-pink-400">{label}</span>
+        <span className="rounded-full border border-cyan-500/40 px-3 py-1 text-xs uppercase tracking-[0.25em]">
+          {lang.toUpperCase()}
+        </span>
+        <span className="text-xs uppercase tracking-[0.25em] text-gray-300">
+          {switchTo}
+        </span>
+      </button>
+    </div>
+  );
+}
+
+function TechItem({ name, description, detailsLabel }) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div
+      className="relative"
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+    >
+      <button
+        className="w-full rounded-xl border border-cyan-500/40 bg-zinc-950/80 px-4 py-3 text-left text-gray-200 transition hover:border-pink-500/70 hover:text-cyan-300 hover:shadow-lg hover:shadow-cyan-500/10"
+        type="button"
+      >
+        {name}
+      </button>
+
+      {open && (
+        <div className="absolute left-0 top-full z-20 mt-3 w-72 rounded-2xl border border-pink-500/60 bg-black/95 p-4 text-sm text-gray-300 shadow-2xl shadow-pink-500/20 backdrop-blur-sm">
+          <div className="mb-2 text-xs uppercase tracking-[0.25em] text-pink-400">
+            {detailsLabel}
+          </div>
+          <p className="leading-relaxed">{description}</p>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function TimelineEduItem({
+  title,
+  subtitle,
+  period,
+  details,
+  detailsLabel,
+  isLast = false,
+}) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div
+      className="relative pl-8"
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+    >
+      {!isLast && (
+        <div className="absolute left-2 top-5 bottom-[-24px] w-px bg-cyan-500/30"></div>
+      )}
+
+      <div className="absolute left-0 top-2 h-4 w-4 rounded-full bg-pink-500 shadow shadow-pink-500/50"></div>
+
+      <div className="rounded-xl border border-cyan-500/40 bg-zinc-950/80 px-4 py-3">
+        <div className="flex items-start justify-between gap-3">
+          <div>
+            <p className="text-sm text-pink-400">{title}</p>
+            <p className="text-xs text-gray-400">{subtitle}</p>
+          </div>
+          <span className="shrink-0 rounded-full border border-cyan-500/30 px-2 py-1 text-[10px] uppercase tracking-[0.2em] text-cyan-300">
+            {period}
+          </span>
+        </div>
+      </div>
+
+      {open && (
+        <div className="absolute left-8 top-full z-20 mt-3 w-72 rounded-2xl border border-pink-500/60 bg-black/95 p-4 text-sm text-gray-300 shadow-2xl shadow-pink-500/20 backdrop-blur-sm">
+          <div className="mb-2 text-xs uppercase tracking-[0.25em] text-pink-400">
+            {detailsLabel}
+          </div>
+          <p className="leading-relaxed">{details}</p>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function TimelineExperienceItem({ role, company, period, bullets, isLast = false }) {
+  return (
+    <div className="relative pl-8">
+      {!isLast && (
+        <div className="absolute left-2 top-5 bottom-[-24px] w-px bg-cyan-500/30"></div>
+      )}
+
+      <div className="absolute left-0 top-2 h-4 w-4 rounded-full bg-cyan-400 shadow shadow-cyan-400/50"></div>
+
+      <div className="rounded-xl border border-cyan-500/40 bg-zinc-950/80 px-4 py-4">
+        <div className="flex items-start justify-between gap-3">
+          <div>
+            <p className="text-sm text-pink-400">{role}</p>
+            <p className="text-xs text-gray-400">{company}</p>
+          </div>
+          <span className="shrink-0 rounded-full border border-pink-500/30 px-2 py-1 text-[10px] uppercase tracking-[0.2em] text-pink-300">
+            {period}
+          </span>
+        </div>
+
+        <ul className="ml-5 mt-3 list-disc space-y-1 text-gray-300">
+          {bullets.map((bullet) => (
+            <li key={bullet}>{bullet}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+}
+
+function LinkCard({ href, label, value, icon }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noreferrer"
+      className="flex items-center gap-3 rounded-xl border border-cyan-500/40 bg-zinc-950/80 px-4 py-3 transition hover:border-pink-500/60 hover:shadow-lg hover:shadow-cyan-500/10"
+    >
+      {icon}
+      <div>
+        <p className="text-xs text-pink-400">{label}</p>
+        <p className="break-all text-sm text-gray-300">{value}</p>
+      </div>
+    </a>
+  );
+}
+
+export default function CyberpunkCV() {
+  const [lang, setLang] = useState("en");
+  const t = translations[lang];
+
+  return (
+    <>
+      <style>{`
+        @keyframes borderSweep {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+
+        .cv-shell {
+          position: relative;
+          overflow: hidden;
+          border-radius: 1rem;
+        }
+
+        .cv-shell::before {
+          content: "";
+          position: absolute;
+          inset: -35%;
+          background: conic-gradient(
+            from 0deg,
+            transparent 0deg,
+            transparent 300deg,
+            rgba(255,255,255,0) 320deg,
+            rgba(255,255,255,0.75) 334deg,
+            rgba(125,211,252,0.95) 344deg,
+            rgba(255,255,255,0.4) 352deg,
+            transparent 360deg
+          );
+          animation: borderSweep 9s linear infinite;
+          pointer-events: none;
+        }
+
+        .cv-shell::after {
+          content: "";
+          position: absolute;
+          inset: 1px;
+          border-radius: calc(1rem - 1px);
+          background: rgba(0,0,0,0.96);
+          pointer-events: none;
+        }
+
+        .cv-content {
+          position: relative;
+          z-index: 1;
+          border-radius: calc(1rem - 1px);
+        }
+      `}</style>
+
+      <div className="min-h-screen bg-black p-6 font-mono text-cyan-300">
+        <div className="cv-shell mx-auto max-w-6xl p-[1px] shadow-2xl shadow-cyan-500/20">
+          <div className="cv-content rounded-2xl border border-cyan-500/40 p-8">
+            <LanguageToggle
+              lang={lang}
+              onToggle={() => setLang((current) => (current === "en" ? "pl" : "en"))}
+              label={t.langLabel}
+              switchTo={t.switchTo}
+            />
+
+            <div className="rounded-2xl border border-pink-500/60 bg-black/60 p-6 shadow-lg shadow-pink-500/20 backdrop-blur-sm">
+              <div className="grid items-center gap-6 md:grid-cols-3">
+                <div className="md:col-span-2">
+                  <h1 className="text-4xl font-bold tracking-widest text-cyan-400">
+                    {t.name}
+                  </h1>
+                  <p className="mt-2 text-pink-400">{t.role}</p>
+                  <p className="mt-4 leading-relaxed text-gray-300">{t.about}</p>
+                </div>
+
+                <div className="flex justify-center md:justify-end">
+                  <div className="flex h-40 w-40 items-center justify-center rounded-xl border border-cyan-500/60 bg-black/80 text-xs text-gray-500 shadow-lg shadow-cyan-500/20">
+                    {t.photo}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-8 grid gap-8 md:grid-cols-3">
+              <div className="space-y-8 md:col-span-2">
+                <section>
+                  <h2 className="border-b border-cyan-500 pb-2 text-xl text-cyan-400">
+                    {t.sections.experience}
+                  </h2>
+                  <div className="mt-4 space-y-6">
+                    {t.experience.map((item, index) => (
+                      <TimelineExperienceItem
+                        key={`${item.role}-${item.company}`}
+                        role={item.role}
+                        company={item.company}
+                        period={item.period}
+                        bullets={item.bullets}
+                        isLast={index === t.experience.length - 1}
+                      />
+                    ))}
+                  </div>
+                </section>
+
+                <section>
+                  <h2 className="border-b border-cyan-500 pb-2 text-xl text-cyan-400">
+                    {t.sections.achievements}
+                  </h2>
+                  <ul className="mt-3 list-disc space-y-2 pl-5 text-gray-300">
+                    {t.achievements.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </section>
+
+                <section>
+                  <h2 className="border-b border-cyan-500 pb-2 text-xl text-cyan-400">
+                    {t.sections.projects}
+                  </h2>
+                  <div className="mt-3">
+                    <p className="text-pink-400">{t.project.title}</p>
+                    <ul className="ml-5 mt-2 list-disc space-y-1 text-gray-300">
+                      {t.project.bullets.map((bullet) => (
+                        <li key={bullet}>{bullet}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </section>
+
+                <section>
+                  <h2 className="border-b border-cyan-500 pb-2 text-xl text-cyan-400">
+                    {t.sections.techStack}
+                  </h2>
+                  <div className="mt-4 grid grid-cols-1 gap-3 md:grid-cols-2">
+                    {t.techStack.map((item) => (
+                      <TechItem
+                        key={item.name}
+                        name={item.name}
+                        description={item.description}
+                        detailsLabel={t.details}
+                      />
+                    ))}
+                  </div>
+                </section>
+              </div>
+
+              <div className="space-y-8">
+                <section>
+                  <h2 className="border-b border-cyan-500 pb-2 text-xl text-cyan-400">
+                    {t.sections.links}
+                  </h2>
+                  <div className="mt-3 space-y-3">
+                    <LinkCard
+                      href="https://github.com/yourprofile"
+                      label={t.links.github}
+                      value="github.com/yourprofile"
+                      icon={<GithubIcon />}
+                    />
+                    <LinkCard
+                      href="https://linkedin.com/in/yourprofile"
+                      label={t.links.linkedin}
+                      value="linkedin.com/in/yourprofile"
+                      icon={<LinkedinIcon />}
+                    />
+                  </div>
+                </section>
+
+                <section>
+                  <h2 className="border-b border-cyan-500 pb-2 text-xl text-cyan-400">
+                    {t.sections.languages}
+                  </h2>
+                  <div className="mt-3 space-y-2 text-gray-300">
+                    {t.languages.map((item) => (
+                      <p key={item}>{item}</p>
+                    ))}
+                  </div>
+                </section>
+
+                <section>
+                  <h2 className="border-b border-cyan-500 pb-2 text-xl text-cyan-400">
+                    {t.sections.learning}
+                  </h2>
+                  <ul className="mt-3 list-disc space-y-1 pl-5 text-gray-300">
+                    {t.learning.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </section>
+
+                <section>
+                  <h2 className="border-b border-cyan-500 pb-2 text-xl text-cyan-400">
+                    {t.sections.education}
+                  </h2>
+                  <div className="mt-4 space-y-6">
+                    {t.education.map((item, index) => (
+                      <TimelineEduItem
+                        key={`${item.title}-${item.period}`}
+                        title={item.title}
+                        subtitle={item.subtitle}
+                        period={item.period}
+                        details={item.details}
+                        detailsLabel={t.details}
+                        isLast={index === t.education.length - 1}
+                      />
+                    ))}
+                  </div>
+                </section>
+
+                <section>
+                  <h2 className="border-b border-cyan-500 pb-2 text-xl text-cyan-400">
+                    {t.sections.interests}
+                  </h2>
+                  <div className="mt-3 flex flex-wrap gap-2 text-sm text-gray-300">
+                    {t.interests.map((item) => (
+                      <span
+                        key={item}
+                        className="rounded-full border border-pink-500/50 px-3 py-1"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
