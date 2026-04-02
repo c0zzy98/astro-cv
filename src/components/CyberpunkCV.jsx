@@ -583,7 +583,7 @@ export default function CyberpunkCV() {
                 <div className="flex justify-center md:justify-end">
                   <div className="h-40 w-40 overflow-hidden rounded-xl border border-cyan-500/60 bg-black/80 shadow-lg shadow-cyan-500/20">
                     <img 
-                      src={import.meta.env.BASE_URL + "photo.jpg"} 
+                      src={import.meta.env.BASE_URL + "/photo.jpg"} 
                       alt={t.name}
                       className="h-full w-full object-cover"
                     />
