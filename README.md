@@ -2,7 +2,7 @@
 DEMO - [KLIKNIJ TUTAJ / PRESS HERE](https://c0zzy98.github.io/astro-cv/)
 ## 📖 Opis projektu
 
-CV Online to aplikacja internetowa stworzona przy użyciu Astro, React oraz TailwindCSS. Projekt umożliwia prezentację CV w nowoczesnym, cyberpunkowym stylu.
+CV Online to moje CV stworzone przy użyciu Astro, React oraz TailwindCSS. Projekt umożliwia prezentację CV w nowoczesnym, cyberpunkowym stylu.
 
 ---
 
