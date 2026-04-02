@@ -108,7 +108,7 @@ const translations = {
       github: "GitHub",
       linkedin: "LinkedIn",
     },
-    languages: ["Polish – Native", "English – Working proficiency - C1 AdvancedLevel"],
+    languages: ["Polish – Native", "English – Working proficiency - C1 Advanced Level"],
     learning: [
       "C# / .NET development",
       "Frontend (Astro, React, Tailwind)",
