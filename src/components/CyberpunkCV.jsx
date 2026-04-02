@@ -42,38 +42,58 @@ const translations = {
       "Participated in the integration of KSeF with the ERP system, including analysis and resolution of integration issues",
       "Supported critical business processes by creating SQL-based analyses and reports",
     ],
-    project: {
-      title: "Formify (Blazor + PostgreSQL)",
-      bullets: [
-        "Authentication & session handling",
-        "Meal tracking system",
-        "Dashboard with macro calculations",
-      ],
-    },
+    projects: [
+      {
+        title: "Formify (Blazor, PostgreSQL)",
+        bullets: [
+          "Implemented a custom authentication and authorization mechanism using CustomAuthStateProvider and user session handling",
+          "Designed and developed a dashboard with calorie and macronutrient calculations",
+          "Built a meal tracking system (CRUD) linked to user accounts and selected dates",
+          "Integrated the application with PostgreSQL and managed user data persistence",
+        ],
+      },
+      {
+        title: "Comarch Optima – KSeF Integration",
+        bullets: [
+          "Configured and integrated Comarch Optima with KSeF, including system updates and environment preparation",
+          "Generating and managing Ministry of Finance certificates and configuring them for system integration",
+          "Supported communication with KSeF and resolved integration-related issues",
+        ],
+      },
+      {
+        title: "ABCMAX E-commerce Website (Vendero)",
+        bullets: [
+          "Created and configured an e-commerce website based on Vendero",
+          "Integrated the system with warehouse data for real-time stock synchronization",
+          "Implemented online payments using Przelewy24 integration",
+          "Configured environment, DNS and supported production deployment",
+        ],
+      },
+    ],
     techStack: [
       {
-        name: "Windows / Linux",
+        name: "Windows / Linux / MacOS",
         description: "System troubleshooting and daily support.",
       },
       {
         name: "SQL / Oracle",
-        description: "Data analysis and debugging ERP issues.",
+        description: "Data analysis in Oracle databases, writing SQL queries for debugging, data validation and supporting business processes.",
       },
       {
         name: "IFS Cloud",
-        description: "ERP support and business process validation.",
+        description: "Support and administration of IFS Cloud ERP, business process analysis and resolving system and integration issues.",
       },
       {
         name: "C# / .NET",
-        description: "Learning fullstack development.",
+        description: "Development in C# and .NET, building web applications.",
       },
       {
         name: "Networking",
-        description: "Basic infrastructure troubleshooting.",
+        description: "Basic network administration, configuration of devices (Mikrotik, FortiGate, Ubiquiti), VLAN tagging and infrastructure support.",
       },
       {
         name: "Git / GitHub",
-        description: "Version control and portfolio projects.",
+        description: "Version control using Git, working with GitHub repositories and managing code changes.",
       },
     ],
     links: {
@@ -152,38 +172,58 @@ const translations = {
       "Udział w integracji KSeF z systemem ERP, obejmujący analizę i rozwiązywanie problemów integracyjnych",
       "Wsparcie krytycznych procesów biznesowych poprzez tworzenie analiz i raportów SQL",
     ],
-    project: {
-      title: "Formify (Blazor + PostgreSQL)",
-      bullets: [
-        "Uwierzytelnianie i obsługa sesji",
-        "System śledzenia posiłków",
-        "Dashboard z kalkulacją makro",
-      ],
-    },
+    projects: [
+      {
+        title: "Formify (Blazor, PostgreSQL)",
+        bullets: [
+          "Implementacja własnego mechanizmu uwierzytelniania i autoryzacji z wykorzystaniem CustomAuthStateProvider oraz obsługi sesji użytkownika",
+          "Projekt i implementacja dashboardu z kalkulacją zapotrzebowania kalorycznego i makroskładników",
+          "Stworzenie systemu śledzenia posiłków (CRUD) powiązanego z użytkownikiem i datą",
+          "Integracja aplikacji z bazą PostgreSQL oraz zarządzanie danymi użytkownika",
+        ],
+      },
+      {
+        title: "Konfiguracja integracji Comarch Optima z KSeF",
+        bullets: [
+          "Konfiguracja środowiska oraz integracji systemu Comarch Optima z KSeF, obejmująca aktualizację systemu oraz przygotowanie środowiska",
+          "Generowanie certyfikatów z Ministerstwa Finansów i ich podpięcie do systemu",
+          "Wsparcie komunikacji z KSeF oraz rozwiązywanie problemów integracyjnych",
+        ],
+      },
+      {
+        title: "Strona sklepu ABCMAX (Vendero)",
+        bullets: [
+          "Utworzenie i konfiguracja sklepu internetowego opartego o Vendero",
+          "Integracja systemu z magazynem – dynamiczne pobieranie stanów magazynowych w czasie rzeczywistym",
+          "Implementacja płatności online poprzez integrację z Przelewy24",
+          "Konfiguracja środowiska, DNS oraz wsparcie wdrożenia produkcyjnego",
+        ],
+      },
+    ],
     techStack: [
       {
-        name: "Windows / Linux",
+        name: "Windows / Linux / MacOS",
         description: "Troubleshooting systemów i codzienne wsparcie użytkowników.",
       },
       {
         name: "SQL / Oracle",
-        description: "Analiza danych i debugowanie problemów ERP.",
+        description: "Analiza danych w bazach Oracle, tworzenie zapytań SQL do identyfikacji problemów, walidacji danych oraz wsparcia procesów biznesowych w ERP",
       },
       {
         name: "IFS Cloud",
-        description: "Wsparcie ERP i walidacja procesów biznesowych.",
+        description: "Wsparcie i administracja systemem ERP IFS Cloud, analiza procesów biznesowych oraz rozwiązywanie problemów integracyjnych i systemowych",
       },
       {
         name: "C# / .NET",
-        description: "Nauka developmentu fullstackowego.",
+        description: "Rozwój aplikacji w C# i .NET, budowa aplikacji webowych.",
       },
       {
         name: "Sieci",
-        description: "Podstawowy troubleshooting infrastruktury.",
+        description: "Podstawowa administracja sieciami, konfiguracja urządzeń (Mikrotik, FortiGate, Ubiquiti), VLAN tagging oraz utrzymanie infrastruktury sieciowej",
       },
       {
         name: "Git / GitHub",
-        description: "Kontrola wersji i projekty do portfolio.",
+        description: "Zarządzanie wersją kodu, praca z repozytoriami GitHub oraz kontrola zmian w projektach developerskich",
       },
     ],
     links: {
@@ -506,13 +546,17 @@ export default function CyberpunkCV() {
                   <h2 className="border-b border-cyan-500 pb-2 text-xl text-cyan-400">
                     {t.sections.projects}
                   </h2>
-                  <div className="mt-3">
-                    <p className="text-pink-400">{t.project.title}</p>
-                    <ul className="ml-5 mt-2 list-disc space-y-1 text-gray-300">
-                      {t.project.bullets.map((bullet) => (
-                        <li key={bullet}>{bullet}</li>
-                      ))}
-                    </ul>
+                  <div className="mt-3 space-y-5">
+                    {t.projects.map((project) => (
+                      <div key={project.title}>
+                        <p className="text-pink-400">{project.title}</p>
+                        <ul className="ml-5 mt-2 list-disc space-y-1 text-gray-300">
+                          {project.bullets.map((bullet) => (
+                            <li key={bullet}>{bullet}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
                   </div>
                 </section>
 
