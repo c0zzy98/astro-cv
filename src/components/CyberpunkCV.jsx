@@ -4,10 +4,10 @@ const translations = {
   en: {
     langLabel: "Language",
     switchTo: "PL",
-    name: "KOZIOŁ",
-    role: "IT Support Engineer | ERP IFS Cloud",
+    name: "KACPER KOZŁOWSKI",
+    role: "IT Support Engineer | ERP IFS Cloud | C# / .NET Developer",
     about:
-      "IT Support Engineer focused on solving real business problems, integrations and system troubleshooting. Actively developing in C# / .NET and modern web technologies.",
+      "IT Support Engineer focused on solving real business problems, integrations (EDI, OCR, KSeF) and system troubleshooting. Actively developing in C# / .NET and modern web technologies, leveraging AI tools.",
     photo: "PHOTO",
     details: "Details",
     sections: {
@@ -110,10 +110,10 @@ const translations = {
   pl: {
     langLabel: "Język",
     switchTo: "EN",
-    name: "KOZIOŁ",
-    role: "IT Support Engineer | ERP IFS Cloud",
+    name: "KACPER KOZŁOWSKI",
+    role: "IT Support Engineer | ERP IFS Cloud | C# / .NET Developer",
     about:
-      "IT Support Engineer skupiony na rozwiązywaniu realnych problemów biznesowych, integracjach i troubleshootingu systemów. Aktywnie rozwijam się w C# / .NET oraz nowoczesnych technologiach webowych.",
+      "IT Support Engineer skupiony na rozwiązywaniu realnych problemów biznesowych, integracjach (EDI, OCR, KSeF) i troubleshootingu systemów. Aktywnie rozwijam się w C# / .NET oraz nowoczesnych technologiach webowych z wykorzystaniem narzędzi AI.",
     photo: "ZDJĘCIE",
     details: "Szczegóły",
     sections: {
@@ -129,9 +129,9 @@ const translations = {
     },
     experience: [
       {
-        role: "IT Support Engineer",
+        role: "IT Support Engineer | ERP IFS Cloud | C#/.NET Developer",
         company: "Citronex",
-        period: "Obecnie",
+        period: "2022-10-03 - Present",
         bullets: [
           "Wsparcie wdrożeń ERP IFS Cloud",
           "Debugowanie integracji (EDI, OCR, KSeF)",
@@ -532,9 +532,9 @@ export default function CyberpunkCV() {
                   </h2>
                   <div className="mt-3 space-y-3">
                     <LinkCard
-                      href="https://github.com/yourprofile"
+                      href="https://github.com/c0zzy98"
                       label={t.links.github}
-                      value="github.com/yourprofile"
+                      value="github.com/c0zzy98"
                       icon={<GithubIcon />}
                     />
                     <LinkCard
