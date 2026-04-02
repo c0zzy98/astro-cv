@@ -35,6 +35,17 @@ const translations = {
           "Administered Active Directory environment, including user management and end-user workstation setup",
         ],
       },
+      {
+        role: "IT Apprentice",
+        company: "Exe.it Srl SB - Erasmus Internship",
+        period: "2015-09 - 2015-10",
+        bullets: [
+          "Completed professional internship in Castel San Pietro Terme, Italy as part of Erasmus program",
+          "Gained hands-on experience in operating systems installation and configuration",
+          "Developed skills in Microsoft Office suite and IT support fundamentals",
+          "Enhanced technical abilities through practical application in international environment",
+        ],
+      },
     ],
     achievements: [
       "Participated in the implementation of the IFS Cloud ERP system within the CITRONEX group, ensuring user support and system stability after go-live",
@@ -119,9 +130,10 @@ const translations = {
     },
     languages: ["Polish – Native", "English – Working proficiency - C1 Advanced Level"],
     learning: [
-      "C# / .NET development",
-      "Frontend (Astro, React, Tailwind)",
-      "System integrations",
+      "Backend: C# / .NET",
+      "Frontend: Astro, React, Tailwind",
+      "System integrations with REST API",
+      "Containerization and automation using Docker and Kubernetes",
     ],
     education: [
       {
@@ -180,6 +192,17 @@ const translations = {
           "Analiza danych z wykorzystaniem SQL w celu identyfikacji niespójności oraz wsparcia krytycznych procesów biznesowych",
           "Wsparcie infrastruktury sieciowej poprzez konfigurację i administrację urządzeń (Mikrotik, Netgear, FortiGate, Ubiquiti), w tym tagowanie VLAN oraz współpraca z inżynierem sieciowym",
           "Administracja środowiskiem Active Directory, w tym zarządzanie kontami użytkowników oraz przygotowanie i konfiguracja stanowisk pracy dla użytkowników końcowych",
+        ],
+      },
+      {
+        role: "Praktykant IT",
+        company: "Exe.it Srl SB - Praktyka Erasmus",
+        period: "2015-09 - 2015-10",
+        bullets: [
+          "Odbycie praktyki zawodowej w Castel San Pietro Terme we Włoszech w ramach programu Erasmus",
+          "Zdobycie praktycznego doświadczenia w instalowaniu i konfiguracji systemów operacyjnych",
+          "Rozwój umiejętności w zakresie pakietu Microsoft Office oraz podstaw wsparcia IT",
+          "Poszerzenie kompetencji technicznych poprzez praktyczne zastosowanie w międzynarodowym środowisku",
         ],
       },
     ],
@@ -266,9 +289,10 @@ const translations = {
     },
     languages: ["Polski – Ojczysty", "Angielski – C1 - Komunikatywny zawodowo"],
     learning: [
-      "Rozwój w C# / .NET",
-      "Frontend (Astro, React, Tailwind)",
-      "Integracje systemowe",
+      "Backend: C# / .NET",
+      "Frontend: Astro, React, Tailwind",
+      "Integracje systemowe z wykorzystaniem REST API",
+      "Konteneryzacje i automatyzacje z wykorzystaniem Dockera i Kubernetesa",
     ],
     education: [
       {
