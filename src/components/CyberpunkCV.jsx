@@ -117,24 +117,24 @@ const translations = {
     education: [
       {
         title: "Master’s Degree",
-        subtitle: "University name / field",
+        subtitle: "WSB Merito University / Logistics",
         period: "201X–201X",
         details:
-          "Advanced studies focused on analytical thinking, problem solving and system-level understanding.",
+          "Studies in Logistics provided me with a strong understanding of business and operational processes. This enables me to better analyze problems and support their resolution using technology. Specialization: Sales Manager.",
       },
       {
         title: "Engineer’s Degree",
-        subtitle: "University name / field",
+        subtitle: "Wrocław University of Science and Technology / Industrial Informatics",
         period: "201X–201X",
         details:
-          "Technical foundation in IT, including programming basics and systems.",
+          "Engineering studies in Industrial Informatics provided a solid technical foundation in IT systems, programming, and system integration within industrial environments. Specialization: Intelligent Industrial Systems.",
       },
       {
         title: "Technical School (IT)",
-        subtitle: "IT qualifications",
+        subtitle: "Information Technology Technical School (ZSP), Lubań",
         period: "201X–201X",
         details:
-          "Professional IT qualifications with hands-on work in networking, systems and real-world technical tasks.",
+          "Education in an IT technical school covered practical aspects of operating systems, networking, and IT administration. Certifications obtained: E12 – assembly and maintenance of personal computers and peripheral devices; E13 – design and administration of computer networks; E14 – development and administration of websites and databases.",
       },
     ],
     interests: ["Programming", "Fitness", "Combat sports", "Shooting"],
@@ -255,24 +255,24 @@ const translations = {
     education: [
       {
         title: "Studia magisterskie",
-        subtitle: "Nazwa uczelni / kierunek",
+        subtitle: "Uniwersystet WSB Merito / Logistyka",
         period: "201X–201X",
         details:
-          "Zaawansowane studia rozwijające myślenie analityczne, rozwiązywanie problemów i rozumienie złożonych systemów.",
+          "Studia na kierunku logistyka pozwoliły mi zrozumieć procesy biznesowe i operacyjne oraz ich wpływ na funkcjonowanie organizacji. Dzięki temu łatwiej identyfikuję problemy i wspieram ich rozwiązywanie z wykorzystaniem technologii. Specjalizacja: Menedżer ds. sprzedaży.",
       },
       {
         title: "Studia inżynierskie",
-        subtitle: "Nazwa uczelni / kierunek",
+        subtitle: "Politechnika Wrocławska / Informatyka przemysłowa",
         period: "201X–201X",
         details:
-          "Techniczne fundamenty IT, w tym podstawy programowania i systemów.",
+          "Techniczne fundamenty IT, w tym podstawy programowania i systemów. Studia inżynierskie na kierunku informatyka przemysłowa dały mi solidne podstawy techniczne z zakresu systemów IT, programowania oraz integracji systemów w środowiskach przemysłowych. Specjalizacja: Inteligentne systemy przemysłowe.",
       },
       {
         title: "Technikum informatyczne",
-        subtitle: "Kwalifikacje zawodowe IT",
+        subtitle: "Technikum informatyczne w ZSP. im. Adama Mickiewicz w Lubaniu",
         period: "201X–201X",
         details:
-          "Kwalifikacje zawodowe IT oraz praktyczna praca z sieciami, systemami i zadaniami technicznymi.",
+          "Kształcenie w technikum informatycznym obejmowało praktyczne zagadnienia z zakresu systemów operacyjnych, sieci oraz administracji IT. Uzyskane kwalifikacje: E12 – montaż i eksploatacja komputerów osobistych i urządzeń peryferyjnych; E13 – projektowanie i administrowanie sieciami komputerowymi; E14 – tworzenie i administrowanie stronami internetowymi oraz bazami danych.",
       },
     ],
     interests: ["Programowanie", "Siłownia", "Sporty walki", "Strzelectwo"],
