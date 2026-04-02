@@ -5,7 +5,7 @@ const translations = {
     langLabel: "Language",
     switchTo: "PL",
     name: "KACPER KOZŁOWSKI",
-    role: "IT Support Engineer | ERP IFS Cloud | C# / .NET Developer",
+    role: "IT Support Engineer",
     about:
       "IT Support Engineer focused on solving real business problems, integrations (EDI, OCR, KSeF) and system troubleshooting. Actively developing in C# / .NET and modern web technologies, leveraging AI tools.",
     photo: "PHOTO",
@@ -137,7 +137,7 @@ const translations = {
           "Professional IT qualifications with hands-on work in networking, systems and real-world technical tasks.",
       },
     ],
-    interests: ["Fitness", "Combat sports", "Programming"],
+    interests: ["Programming", "Fitness", "Combat sports", "Shooting"],
   },
   pl: {
     langLabel: "Język",
@@ -275,7 +275,7 @@ const translations = {
           "Kwalifikacje zawodowe IT oraz praktyczna praca z sieciami, systemami i zadaniami technicznymi.",
       },
     ],
-    interests: ["Siłownia", "Sporty walki", "Programowanie"],
+    interests: ["Programowanie", "Siłownia", "Sporty walki", "Strzelectwo"],
   },
 };
 
