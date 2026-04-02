@@ -69,6 +69,15 @@ const translations = {
           "Configured environment, DNS and supported production deployment",
         ],
       },
+      {
+        title: "IFSDeliveryInstaller (C# / .NET)",
+        bullets: [
+          "Developed a desktop application to automate installation and configuration of IFS Cloud components",
+          "Improved deployment processes by eliminating manual installation steps and standardizing the workflow",
+          "Actively used in production environment to support IT team operations",
+          "Implemented installation logic and error handling to increase process reliability",
+        ],
+      },
     ],
     techStack: [
       {
@@ -118,26 +127,26 @@ const translations = {
       {
         title: "Master’s Degree",
         subtitle: "WSB Merito University / Logistics",
-        period: "201X–201X",
+        period: "2022–2024",
         details:
           "Studies in Logistics provided me with a strong understanding of business and operational processes. This enables me to better analyze problems and support their resolution using technology. Specialization: Sales Manager.",
       },
       {
         title: "Engineer’s Degree",
         subtitle: "Wrocław University of Science and Technology / Industrial Informatics",
-        period: "201X–201X",
+        period: "2018–2022",
         details:
           "Engineering studies in Industrial Informatics provided a solid technical foundation in IT systems, programming, and system integration within industrial environments. Specialization: Intelligent Industrial Systems.",
       },
       {
         title: "Technical School (IT)",
         subtitle: "Information Technology Technical School (ZSP), Lubań",
-        period: "201X–201X",
+        period: "2014–2018",
         details:
           "Education in an IT technical school covered practical aspects of operating systems, networking, and IT administration. Certifications obtained: E12 – assembly and maintenance of personal computers and peripheral devices; E13 – design and administration of computer networks; E14 – development and administration of websites and databases.",
       },
     ],
-    interests: ["Programming", "Fitness", "Combat sports", "Shooting"],
+    interests: ["Programming", "Fitness", "Combat sports", "Sport shooting"],
   },
   pl: {
     langLabel: "Język",
@@ -207,6 +216,15 @@ const translations = {
           "Konfiguracja środowiska, DNS oraz wsparcie wdrożenia produkcyjnego",
         ],
       },
+      {
+        title: "IFSDeliveryInstaller (C# / .NET)",
+        bullets: [
+          "Stworzenie aplikacji desktopowej automatyzującej proces instalacji i konfiguracji komponentów IFS Cloud",
+          "Usprawnienie wdrożeń poprzez eliminację ręcznych kroków instalacyjnych oraz standaryzację procesu",
+          "Wykorzystanie narzędzia w środowisku produkcyjnym do wsparcia pracy zespołu IT",
+          "Implementacja logiki instalacyjnej oraz obsługi błędów w celu zwiększenia niezawodności procesu",
+        ],
+      },
     ],
     techStack: [
       {
@@ -256,21 +274,21 @@ const translations = {
       {
         title: "Studia magisterskie",
         subtitle: "Uniwersystet WSB Merito / Logistyka",
-        period: "201X–201X",
+        period: "2012–2014",
         details:
           "Studia na kierunku logistyka pozwoliły mi zrozumieć procesy biznesowe i operacyjne oraz ich wpływ na funkcjonowanie organizacji. Dzięki temu łatwiej identyfikuję problemy i wspieram ich rozwiązywanie z wykorzystaniem technologii. Specjalizacja: Menedżer ds. sprzedaży.",
       },
       {
         title: "Studia inżynierskie",
         subtitle: "Politechnika Wrocławska / Informatyka przemysłowa",
-        period: "201X–201X",
+        period: "2018–2022",
         details:
           "Techniczne fundamenty IT, w tym podstawy programowania i systemów. Studia inżynierskie na kierunku informatyka przemysłowa dały mi solidne podstawy techniczne z zakresu systemów IT, programowania oraz integracji systemów w środowiskach przemysłowych. Specjalizacja: Inteligentne systemy przemysłowe.",
       },
       {
         title: "Technikum informatyczne",
         subtitle: "Technikum informatyczne w ZSP. im. Adama Mickiewicz w Lubaniu",
-        period: "201X–201X",
+        period: "2014–2018",
         details:
           "Kształcenie w technikum informatycznym obejmowało praktyczne zagadnienia z zakresu systemów operacyjnych, sieci oraz administracji IT. Uzyskane kwalifikacje: E12 – montaż i eksploatacja komputerów osobistych i urządzeń peryferyjnych; E13 – projektowanie i administrowanie sieciami komputerowymi; E14 – tworzenie i administrowanie stronami internetowymi oraz bazami danych.",
       },
