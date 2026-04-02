@@ -95,6 +95,14 @@ const translations = {
         name: "Git / GitHub",
         description: "Version control using Git, working with GitHub repositories and managing code changes.",
       },
+      {
+        name: "Kubernetes",
+        description: "Container orchestration for deploying, scaling, and managing applications. Hands-on experience with clusters and workloads.",
+      },
+      {
+        name: "Docker",
+        description: "Containerization platform for building, sharing, and running applications in isolated environments.",
+      },
     ],
     links: {
       github: "GitHub",
@@ -224,6 +232,14 @@ const translations = {
       {
         name: "Git / GitHub",
         description: "Zarządzanie wersją kodu, praca z repozytoriami GitHub oraz kontrola zmian w projektach developerskich",
+      },
+      {
+        name: "Kubernetes",
+        description: "Orkiestracja kontenerów do wdrażania, skalowania i zarządzania aplikacjami. Praktyczne doświadczenie z klastrami i obciążeniami.",
+      },
+      {
+        name: "Docker",
+        description: "Platforma do konteneryzacji aplikacji, umożliwiająca budowanie, udostępnianie i uruchamianie aplikacji w izolowanych środowiskach.",
       },
     ],
     links: {
